@@ -1,2 +1,2 @@
 # Pixleon
-2D Graphics Engine
+Open Source 2D Graphics Engine

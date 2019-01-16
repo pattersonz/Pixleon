@@ -1,5 +1,5 @@
 #pragma once
 
-Class Sprite
+class Sprite
 {
 };

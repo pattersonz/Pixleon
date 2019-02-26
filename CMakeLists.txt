@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.13)
+cmake_minimum_required(VERSION 3.12)
 
 project(Pixleon)
  
@@ -6,9 +6,8 @@ FIND_PACKAGE(OPENCL REQUIRED)
 
 if(OpenCL_FOUND)
 	message(OpenCL_VERSION_STRING)
-endif(OpenCL_FOUND)
- 
- 
+endif(OpenCL_FOUND) 
+
  add_subdirectory(mainSrc)
  add_subdirectory(pixPipeline)
  add_subdirectory(pixLib)

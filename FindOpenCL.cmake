@@ -7,6 +7,7 @@
 #
 # WIN32 should work, but is untested
 
+
 IF (WIN32)
 	FIND_PATH(OPENCL_INCLUDE_DIR CL/cl.h )
 	

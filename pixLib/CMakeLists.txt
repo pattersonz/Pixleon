@@ -1,8 +1,7 @@
 include_directories(${CMAKE_SOURCE_DIR})
-include_directories(${OPENCL_INCLUDE_DIR})
+include_directories(${VULKAN_INCLUDE_DIR})
 
 add_library(pixLib 
-	Sprite.cpp Sprite.h
-	OpenCLData.cpp OpenCLData.h)	
+	Sprite.cpp Sprite.h)	
 
- target_link_libraries(pixLib OpenCL::OpenCL)
+ target_link_libraries(pixLib Vulkan::Vulkan)

@@ -6,13 +6,11 @@
 #include <vector>
 
 #include "Pipe.h"
-#include "OpenCLData.h"
 using std::vector;
 
 void initializeOpenCL();
 
 int main ()
 {
-	OpenCLData ocl();
 	return 0;
 }

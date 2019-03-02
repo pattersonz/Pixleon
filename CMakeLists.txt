@@ -2,11 +2,15 @@ cmake_minimum_required(VERSION 3.12)
 
 project(Pixleon)
 
-FIND_PACKAGE(OPENCL REQUIRED)
+set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH}"${CMAKE_SOURCE_DIR}/cmake/Modules/")
 
-if(OpenCL_FOUND)
-	message(OpenCL_VERSION_STRING)
-endif(OpenCL_FOUND)
+FIND_PACKAGE(VULKAN REQUIRED)
+
+IF (NOT Vulkan_FOUND)
+	message(FATAL_ERROR "Could not find Vulkan library!")
+ELSE()
+	message(STATUS ${Vulkan_LIBRARY})
+ENDIF()
  
  
  add_subdirectory(mainSrc)

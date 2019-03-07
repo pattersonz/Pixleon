@@ -18,9 +18,8 @@ FIND_PACKAGE(VULKAN REQUIRED)
 IF (NOT Vulkan_FOUND)
 	message(FATAL_ERROR "Could not find Vulkan library!")
 ELSE()
-	message(STATUS ${Vulkan_LIBRARY})
+	message(STATUS "Libraries for Vulkan: ${VULKAN_LIBRARY}")
 ENDIF()
- 
  
  add_subdirectory(mainSrc)
  add_subdirectory(pixPipeline)

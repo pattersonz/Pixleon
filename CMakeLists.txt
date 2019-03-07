@@ -4,6 +4,15 @@ project(Pixleon)
 
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/Modules/")
 
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
+
+
+add_subdirectory(${CMAKE_SOURCE_DIR}/glfw321)
+
+include_directories(${CMAKE_SOURCE_DIR}/glfw321/include)
+message(STATUS "${GLFW_LIBRARIES}")
+set(GLFW_STATIC_LIBRARIES "${GLFW_LIBRARIES}")
+
 FIND_PACKAGE(VULKAN REQUIRED)
 
 IF (NOT Vulkan_FOUND)

@@ -1,6 +1,3 @@
-#pragma once
-
-
 #define MAX_SOURCE_SIZE (0x100000)
 
 #include <vector>

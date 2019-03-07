@@ -4,4 +4,4 @@ include_directories(${VULKAN_INCLUDE_DIR})
 add_library(pixLib 
 	Sprite.cpp Sprite.h)	
 
- target_link_libraries(pixLib Vulkan::Vulkan)
+ target_link_libraries(pixLib ${Vulkan_LIBRARIES})

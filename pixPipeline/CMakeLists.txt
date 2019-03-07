@@ -7,4 +7,4 @@ add_library(pixPipeline
 )
 
 target_link_libraries(pixPipeline pixLib)
- target_link_libraries(pixPipeline Vulkan::Vulkan)
+ target_link_libraries(pixPipeline ${Vulkan_LIBRARIES})

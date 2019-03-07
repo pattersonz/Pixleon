@@ -6,6 +6,6 @@
  add_executable(pixleon
 		main.cpp)
 		
- target_link_libraries(pixleon Vulkan::Vulkan)
+ target_link_libraries(pixleon ${Vulkan_LIBRARIES})
  target_link_libraries(pixleon pixPipeline)
  target_link_libraries(pixleon pixLib)

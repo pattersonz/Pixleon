@@ -1,8 +1,8 @@
-cmake_minimum_required(VERSION 3.10)
+cmake_minimum_required(VERSION 3.8)
 
 project(Pixleon)
 
-set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH}"${CMAKE_SOURCE_DIR}/cmake/Modules/")
+set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/Modules/")
 
 FIND_PACKAGE(VULKAN REQUIRED)
 

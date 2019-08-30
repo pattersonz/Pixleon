@@ -32,3 +32,6 @@
 *.app
 build
 /.vs
+
+# emacs buffers
+*~

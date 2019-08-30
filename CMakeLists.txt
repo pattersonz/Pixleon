@@ -4,23 +4,14 @@ project(Pixleon)
 
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/Modules/")
 
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++17")
 
+add_definitions( -DROOT_DIR="${CMAKE_SOURCE_DIR}")
 
-add_subdirectory(${CMAKE_SOURCE_DIR}/glfw321)
+find_package(glfw3 3.3 REQUIRED)
+find_package(OpenGL REQUIRED)
+find_package(Vulkan REQUIRED)
 
-include_directories(${CMAKE_SOURCE_DIR}/glfw321/include)
-message(STATUS "${GLFW_LIBRARIES}")
-set(GLFW_STATIC_LIBRARIES "${GLFW_LIBRARIES}")
-
-FIND_PACKAGE(VULKAN REQUIRED)
-
-IF (NOT Vulkan_FOUND)
-	message(FATAL_ERROR "Could not find Vulkan library!")
-ELSE()
-	message(STATUS "Libraries for Vulkan: ${VULKAN_LIBRARY}")
-ENDIF()
- 
  add_subdirectory(mainSrc)
  add_subdirectory(pixPipeline)
  add_subdirectory(pixLib)
